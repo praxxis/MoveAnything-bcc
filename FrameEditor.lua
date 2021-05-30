@@ -114,7 +114,7 @@ function MovAny:CreateFrameEditor(id, name)
 	end
 
 	local fn = "MA_FE"..id
-	local fe = CreateFrame("Frame", fn, UIParent)
+	local fe = CreateFrame("Frame", fn, UIParent, BackdropTemplateMixin and "BackdropTemplate" or nil)
 
 	fe:SetSize(650, 495)
 	fe:SetFrameStrata("DIALOG")

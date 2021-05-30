@@ -57,7 +57,7 @@ local m = {
 		c = API:GetCategory("Achievements & Quests")
 		API:AddElement({name = "AchievementFrame", displayName = "Achievements"}, c)
 		local gcaf
-		if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
+		if WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
 			API:AddElement({name = "AchievementAlertFrame1", displayName = "Achievement Alert 1", runOnce = AchievementFrame_LoadUI, create = "AchievementAlertFrameTemplate"}, c)
 			API:AddElement({name = "AchievementAlertFrame2", displayName = "Achievement Alert 2", runOnce = AchievementFrame_LoadUI, create = "AchievementAlertFrameTemplate"}, c)
 			API:AddElement({name = "CriteriaAlertFrame1", displayName = "Criteria Alert 1", create = "CriteriaAlertFrameTemplate"}, c)
@@ -73,12 +73,12 @@ local m = {
 				HideUIPanel(QuestLogDetailFrame)
 			end
 		end}, c)]]
-		if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
+		if WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
 			API:AddElement({name = "QuestLogPopupDetailFrame", displayName = "Quest Details"}, c)
 		end
 		API:AddElement({name = "QuestNPCModel", displayName = "Quest Log NPC Model"}, c)
 		local qf = API:AddElement({name = "QuestFrame", displayName = "Quest Offer / Return", runOnce = function()
-			hooksecurefunc(WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and QuestFrame or QuestLogFrame, "Show", function()
+			hooksecurefunc(WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and QuestFrame or QuestLogFrame, "Show", function()
 				if MovAny:IsModified("QuestFrame") then
 					HideUIPanel(GossipFrame)
 				end
@@ -435,7 +435,7 @@ local m = {
 		gbmfg:AddCategory(c)
 		gbmfs:AddCategory(c)
 		gbmfc:AddCategory(c)
-		if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
+		if WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
 			gcaf:AddCategory(c)
 		end
 		API:AddElement({name = "GuildControlUI", displayName = "Guild Control"}, c)

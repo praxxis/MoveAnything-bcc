@@ -937,7 +937,7 @@ MovAny.lVirtualMovers = {
 		h = 700,
 		point = {"TOPRIGHT", "MinimapCluster", "BOTTOMRIGHT", -10, 0},
 		OnMAHook = function(self)
-			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
+			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
 			MovAny:UnlockPoint(b)
 			b:ClearAllPoints()
 			b:SetPoint("TOPRIGHT", self, "TOPRIGHT")
@@ -949,14 +949,14 @@ MovAny.lVirtualMovers = {
 			--self.sbf = b
 		end,
 		OnMAPostReset = function(self)
-			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
+			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
 			MovAny:UnlockPoint(b)
 			b:ClearAllPoints()
 			b:SetPoint("TOPRIGHT", "MinimapCluster", "BOTTOMRIGHT", -10, 0)
 			--b:SetHeight(b:GetTop() - 85)
 		end,
 		OnMAScale = function(self)
-			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
+			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
 			local scaleS = self:GetScale()
 			local scaleH = self:GetHeight()
 			local scaleW = self:GetWidth()
@@ -965,9 +965,9 @@ MovAny.lVirtualMovers = {
 		end,
 		OnMAHide = function(self, hidden)
 			if hidden then
-				MovAny:LockVisibility(WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and _G["ObjectiveTrackerFrame"] or _G["QuestWatchFrame"])
+				MovAny:LockVisibility(WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and _G["ObjectiveTrackerFrame"] or _G["QuestWatchFrame"])
 			else
-				MovAny:UnlockVisibility(WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and _G["ObjectiveTrackerFrame"] or _G["QuestWatchFrame"])
+				MovAny:UnlockVisibility(WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and _G["ObjectiveTrackerFrame"] or _G["QuestWatchFrame"])
 			end
 		end
 	},
@@ -976,7 +976,7 @@ MovAny.lVirtualMovers = {
 		h = 700,
 		point = {"TOPRIGHT", "MinimapCluster", "BOTTOMRIGHT", -10, 0},
 		OnMAHook = function(self)
-			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
+			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
 			MovAny:UnlockPoint(b)
 			b:ClearAllPoints()
 			b:SetPoint("TOPRIGHT", self, "TOPRIGHT")
@@ -988,22 +988,22 @@ MovAny.lVirtualMovers = {
 			--self.sbf = b
 		end,
 		OnMAPostReset = function(self)
-			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
+			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
 			MovAny:UnlockPoint(b)
 			b:ClearAllPoints()
 			b:SetPoint("TOPRIGHT", "MinimapCluster", "BOTTOMRIGHT", -10, 0)
 			--b:SetHeight(b:GetTop() - 85)
 		end,
 		OnMAScale = function(self)
-			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
+			local b = (WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and ObjectiveTrackerFrame or QuestWatchFrame)
 			local scaleS = self:GetScale()
 			b:SetScale(scaleS)
 		end,
 		OnMAHide = function(self, hidden)
 			if hidden then
-				MovAny:LockVisibility(WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and _G["ObjectiveTrackerFrame"] or _G["QuestWatchFrame"])
+				MovAny:LockVisibility(WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and _G["ObjectiveTrackerFrame"] or _G["QuestWatchFrame"])
 			else
-				MovAny:UnlockVisibility(WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC and _G["ObjectiveTrackerFrame"] or _G["QuestWatchFrame"])
+				MovAny:UnlockVisibility(WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC and _G["ObjectiveTrackerFrame"] or _G["QuestWatchFrame"])
 			end
 		end
 	},

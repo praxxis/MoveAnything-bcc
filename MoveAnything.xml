@@ -163,6 +163,9 @@
 		</Backdrop>
 		<Scripts>
 			<OnLoad>
+				if not self.SetBackdrop then
+					Mixin(self, BackdropTemplateMixin)
+				end
 				local anchorto, anchor = MovAny:SizingAnchor(self)
 				self:SetPoint(anchor, self:GetParent(), anchorto, 0, 0)
 				self:SetBackdropColor(0, 0, 0, 1)
@@ -229,6 +232,9 @@
 		</ResizeBounds>
 		<Scripts>
 			<OnLoad>
+				if not self.SetBackdrop then
+					Mixin(self, BackdropTemplateMixin)
+				end
 				self.neverShowTooltip = true
 				_G[ self:GetName().."Backdrop" ]:SetBackdropColor(.8, .8, .8, .7)
 				_G[ self:GetName().."Backdrop" ]:SetBackdropBorderColor(1, 1, 1, 1)
@@ -336,6 +342,13 @@
 		</Scripts>
 		<Frames>
 			<Frame name="$parentBackdrop" setAllPoints="true" enableMouse="false">
+				<Scripts>
+					<OnLoad>
+						if not self.SetBackdrop then
+							Mixin(self, BackdropTemplateMixin)
+						end
+					</OnLoad>
+				</Scripts>
 				<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
 					<EdgeSize>
 						<AbsValue val="8"/>
@@ -422,6 +435,9 @@
 				</Backdrop>
 				<Scripts>
 					<OnLoad>
+						if not self.SetBackdrop then
+							Mixin(self, BackdropTemplateMixin)
+						end
 						self:SetBackdropColor(.03, .03, .03)
 						self:SetBackdropBorderColor(.4, .4, .4)
 					</OnLoad>
@@ -868,6 +884,9 @@
 						</Backdrop>
 						<Scripts>
 							<OnLoad>
+								if not self.SetBackdrop then
+									Mixin(self, BackdropTemplateMixin)
+								end
 								self:SetBackdropColor(.1, .1, .1)
 								self:SetBackdropBorderColor(.4, .4, .4)
 							</OnLoad>
@@ -887,7 +906,7 @@
 				self:RegisterEvent("PLAYER_REGEN_DISABLED")
 				self:RegisterEvent("PLAYER_REGEN_ENABLED")
 				self:RegisterEvent("GROUP_ROSTER_UPDATE")
-				if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
+				if WOW_PROJECT_ID ~= WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
 					self:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
 					self:RegisterEvent("PLAYER_FOCUS_CHANGED")
 				end
@@ -1155,6 +1174,9 @@
 		</Frames>
 		<Scripts>
 			<OnLoad>
+				if not self.SetBackdrop then
+					Mixin(self, BackdropTemplateMixin)
+				end
 				self.neverShowTooltip = true
 				self:EnableMouse(true)
 				self:SetMovable(true)

@@ -1,4 +1,6 @@
 ## Interface: 80300
+## Interface-Classic: 11306
+## Interface-BCC: 20501
 ## Title: MoveAnything
 ## Version: 17.1.0
 ## Author: Wagthaa
