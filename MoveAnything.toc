@@ -2,7 +2,7 @@
 ## Interface-Classic: 11306
 ## Interface-BCC: 20501
 ## Title: MoveAnything
-## Version: 17.1.0
+## Version: 17.1.1
 ## Author: Wagthaa
 ## Notes: Move, scale, hide and adjust transparency of just about any screen element in the game.
 ## DefaultState: Enabled
